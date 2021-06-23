@@ -1,0 +1,52 @@
+//////////////////
+// --> LIST <-- //
+//////////////////
+
+ol,
+ul {
+  padding-left: 0;  
+}
+
+ol,
+ul,
+dl {  
+  margin-bottom: 0;
+}
+
+
+
+//////////////////
+// --> LINK <-- //
+//////////////////
+
+a {
+  @include transition;
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+
+
+////////////////////////////
+// --> Clamp Function <-- //
+////////////////////////////
+
+$pixelsPerRem: 16;
+$minWidthPx: 576;
+$maxWidthPx: 1920;
+
+@function get-clamp($minFontSizePx, $maxFontSizePx) {
+  $minWidth: $minWidthPx/$pixelsPerRem;
+  $maxWidth: $maxWidthPx/$pixelsPerRem;
+  $minFontSize: $minFontSizePx/$pixelsPerRem;
+  $maxFontSize: $maxFontSizePx/$pixelsPerRem;
+  $slope: ($maxFontSize - $minFontSize)/($maxWidth - $minWidth);
+  $yAxisIntersection: - $minWidth * $slope + $minFontSize;  
+  $fluid: calc(#{$yAxisIntersection}rem + #{$slope * 100}vw);
+  @return clamp( #{$minFontSize}rem, $fluid, #{$maxFontSize}rem );
+}

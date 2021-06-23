@@ -1,0 +1,56 @@
+//
+// Colors
+//
+$primary:       #09044a !default;
+$secondary:     #19facd !default;
+
+
+//
+// Font Family
+//
+//$font-family-base: ;
+
+
+// 
+// Body
+//
+$body-color:    $primary !default; 
+$body-bg:       $secondary !default; 
+
+
+//
+// Type
+//
+$link-color:    white !default;
+
+
+//
+// Grid Breakpoints
+//
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+
+//
+// Grid Containers
+//
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+
+//
+// Buttons
+//
+$input-btn-padding-y:         .63rem !default;
+$input-btn-padding-x:         1.74rem !default;

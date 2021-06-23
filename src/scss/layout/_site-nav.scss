@@ -1,0 +1,318 @@
+nav{
+	
+	display: flex;
+	justify-content: flex-end;
+	//font-family: $font-family-base;		     	
+
+	ul.menu{		    			
+    	
+    	padding: 0 5%;
+
+    	li{		    		
+    		@include font-size($h1-font-size);    		
+    		//text-align:center;	
+    		//border-bottom:1px solid rgba(white,.2); 
+    		
+    		a{
+    			text-decoration:none;
+    			@include transition;
+    		}
+    		
+    		&:not(.btn){
+    			padding:1.5rem 0;
+    			line-height:1;
+
+    			a{
+	    			color: $primary;		    				    			
+	    		}   	
+    		}
+    		
+    		&.btn{
+    			margin-top:2rem;
+    		}
+
+    		
+    		// ---> Mobile Nav Submenu <--- //
+    		
+    		@include media-breakpoint-down(lg) { 
+    		
+	    		&.menu-item-has-children{
+	    			    			
+	    			padding-bottom:0;	    			
+
+	    			&.active{
+	    				padding-bottom:0;
+	    			} 			
+
+		    		ul.sub-menu{							
+						
+						margin-top:1.5rem; 
+						max-height: 0;
+						overflow: hidden;
+						@include transition;
+																
+			    		&.show{
+			    			max-height: 1000px;
+			    		}
+						
+						li{										
+							background:darken($secondary, 5%);	
+							border-bottom:none;	   
+							
+							& + li{
+								border-top:1px solid rgba(white,.2);
+							}											
+						}
+					}
+				}
+			}
+    	}
+
+
+    	// ---> Desktop Nav <--- //
+    	
+    	@include media-breakpoint-up(lg) { 
+    		
+    		display: flex;
+    		align-items: center;
+    		padding: 0; 
+
+    		li{
+    			@include font-size($h5-font-size);
+    			display:inline;    			    			
+    			border-bottom:none;
+
+    			&:not(.btn){
+    				padding:0;
+
+    				a{
+    					padding-top:2.625rem;
+    					padding-bottom:2.625rem;
+    					display:inline-block;
+    				}
+    			}
+				
+				&:hover{
+					a{
+						color: white;
+    					//text-decoration: underline;
+					}
+				}	
+
+    			& + li{
+    				margin-left:get-clamp(8, 56);
+    			}
+
+    			&.menu-item-has-children{
+    				position: relative;
+	    			
+	    			ul.sub-menu{
+	    				background: white;
+	    				border-radius: 8px;	    				
+	    				
+	    				position: absolute;
+	    				box-align: start;
+	    				align-items: flex-start;
+    					left: auto;
+    					top: auto;
+    					right: 0;
+    					bottom: auto;
+			    
+					    display: flex;
+					    overflow: hidden;
+					    width: auto;
+					    margin-top: 0;
+					    padding: 1.67em 2.22em 1.39em;
+					    box-orient: vertical;
+					    box-direction: normal;
+					    flex-direction: column;
+	    				
+	    				display: none;	    				
+	    				
+	    				li{
+	    					display: block;
+	    					margin:0;
+	    					padding:1rem 0;
+	    					//text-align:center;	    					
+
+	    					& + li{
+								//border-top:1px solid rgba(white,.2);
+							}
+
+							a{
+								color: $primary;
+								padding: 0;
+								
+								&:hover{
+									color:$secondary;
+								}
+							}
+	    				}
+	    			}
+
+	    			&:hover{
+	    				ul.sub-menu{
+							display:block;
+						}
+	    			}
+	    		}
+
+	    		&.btn{
+	    			margin-top:0;
+	    		}
+    		}
+    	}
+	}
+
+
+	
+
+	// ---> Button Nav <--- //
+	
+	//.navbar-cta{
+		//font-family: $header-font-family;
+		//font-size: 1.15rem;
+		//letter-spacing:.15rem;							
+		//background: $primary;		
+		//text-transform:uppercase;					
+		//text-shadow: 0px 0px 16px rgba($secondary,.5);
+		//border-bottom:none;	    
+
+		//@include media-breakpoint-up(lg) { 
+			//padding: 0 3rem!important;
+			//height: $header-height;								
+			//display: flex!important;
+    		//align-items: center;
+    	//}
+	//}
+
+
+	
+	
+	// ---> Mobile Nav Custom Style <!--- //
+
+	.nav-dropdown{
+		@include media-breakpoint-down(lg) { 
+			margin-top: $header-height;
+			background: $secondary;		
+
+			.menu{
+				padding-bottom:$header-height;
+			}			
+		}
+	}
+
+
+
+	
+	// ---> Mobile Nav Base Style <!--- //
+	
+	.nav-toggler{
+		span{						
+			font-size: 13px;
+			@include media-breakpoint-up(lg) { 
+				display:none;
+			}
+		}
+	}
+	
+	@include media-breakpoint-down(lg) { 
+		
+		.nav-toggler{
+			z-index: 2;			
+		    cursor: pointer;
+		    width:40px;
+		    height:30px;		    
+		    position:relative;		    
+
+		   	&:after, &:before{
+		    	content:"";
+		    	width:39px;
+		    	height:2px;
+		    	background:$primary;
+		    	position:absolute;			    				    	
+		    	@include transition;
+		    }
+		    
+		    &:before{
+		    	top:24px;
+		    }
+		    
+		    &:after{
+		    	top:30px;					
+		    	left:0;
+		    }
+
+		    &.active{
+		    	
+		    	span{
+		    		display:none;
+		    	}
+		    	
+		    	&:after, &:before{			    	
+			    	top:13px;				        
+			    }
+			    
+			    &:before{
+			    	transform: rotate(45deg);				        
+			    }
+		    	
+		    	&:after{
+		    		transform: rotate(-45deg);				        
+		    	}				 
+		    }			    
+		}
+		
+		.nav-dropdown{			
+		    position: fixed;		    
+		    top: 0;
+		    left: 0;
+		    width: 100%;		    		    
+		    min-height: 0;
+		    visibility: hidden;
+		    @include transition;
+		    z-index: 9;		    
+		    overflow-y: scroll;
+
+		    &.show{
+		    	min-height: 100vh;
+		    	visibility: visible;
+		    }
+
+		    .menu{		    	
+			    width:100%;
+			    position:absolute;
+			    display: flex;
+    			flex-direction: column;
+
+
+			    li{			    
+    				opacity: 0;		    				    					    		
+    				display:block;
+    				margin:0;
+					&:nth-child(1){ order:2; }
+					&:nth-child(2){ order:3; }
+					&:nth-child(3){ order:4; }
+					&:nth-child(4){ order:5; }
+					&:nth-child(5){ order:6; }
+					&:nth-child(6){ order:1; }
+					@include transition;
+			    }		    			    
+			}
+
+			&.show{
+				ul.menu {						
+					li {
+				        opacity: 1;					        
+				        &:nth-child(6) { transition-delay: 0.18s; }
+				        &:nth-child(1) { transition-delay: 0.24s; }
+				        &:nth-child(2) { transition-delay: 0.30s; }
+				        &:nth-child(3) { transition-delay: 0.36s; }
+				        &:nth-child(4) { transition-delay: 0.42s; }
+				        &:nth-child(5) { transition-delay: 0.48s; }
+				    }
+				}
+			}
+		}
+	}
+}

@@ -12,3 +12,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div class="site-wrap">
+
+<a class="visually-hidden-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'bth-starter' ); ?></a>
+
+<?php get_template_part( TEMPLATE_PATH . 'header/site-header' ); ?>

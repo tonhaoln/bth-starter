@@ -25,7 +25,7 @@ export const styles = () =>
     .pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie11' })))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
     .pipe(dest('dist/css'))
-    .pipe(gulpif(PRODUCTION, cacheBust('./functions.php', '.')))
+    //.pipe(gulpif(PRODUCTION, cacheBust('./functions.php', '.')))
     .pipe(server.stream());
 
 export const componentStyles = () =>
