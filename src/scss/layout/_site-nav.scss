@@ -5,11 +5,9 @@ nav{
 	
 	//font-family: $font-family-base;		     	
 
-	
 	ul.menu{		    			
     	
     	padding: 0 5%;
-
     	
     	li{		    		
     		
@@ -30,7 +28,6 @@ nav{
     				color:inherit;
     			}
     		}
-
     		
     		&.menu-item-has-children{
     			ul.sub-menu{							
@@ -45,10 +42,9 @@ nav{
     					}
     				}													
     			}
-    		}
+    		}	
     		
-    		
-    		
+    	
     		// ---> Mobile Nav Submenu <--- //
     		
     		@include media-breakpoint-down(lg) { 
@@ -81,7 +77,6 @@ nav{
     		display: flex;
     		align-items: center;
     		padding: 0; 
-
     		
     		li{
     			@include font-size($h5-font-size);
@@ -107,7 +102,6 @@ nav{
     			& + li{
     				margin-left:get-clamp(8, 56);
     			}
-
     			
     			&.menu-item-has-children{
     				
@@ -134,7 +128,6 @@ nav{
 	}
 
 
-
 	// ---> Mobile Nav Custom Style <!--- //
 
 	.nav-dropdown{
@@ -147,7 +140,6 @@ nav{
 			}			
 		}
 	}
-
 
 
 	// ---> Mobile Nav Base Style <!--- //
