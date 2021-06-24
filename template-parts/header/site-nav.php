@@ -6,7 +6,7 @@
         'theme_location' => 'main-menu',
         'menu_id'        => 'primary-menu',
         'container_class' => 'menu',
-      ) );
+      ));
     ?>    
   </div>
 </nav>

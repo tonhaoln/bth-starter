@@ -77,3 +77,8 @@ function starter_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'starter_assets' );
 
+
+/**
+ * Load Extras and Helpers file
+ */
+require get_template_directory() . '/inc/extras.php';

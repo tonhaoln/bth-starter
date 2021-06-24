@@ -30,6 +30,14 @@ nav{
     		}
     		
     		&.menu-item-has-children{
+
+    			i{
+    				margin-left: 8px;  
+    				svg{
+    					@include transition;
+    				}  				
+    			}
+
     			ul.sub-menu{							
     				display: none;
     				border-radius: 8px;	
@@ -41,6 +49,16 @@ nav{
     						color: $secondary;
     					}
     				}													
+    			}
+    		}
+
+    		&:hover, &.active{
+    			&.menu-item-has-children{
+    				i{
+    					svg{
+    						transform: rotateZ(180deg);
+    					}
+    				}
     			}
     		}	
     		
