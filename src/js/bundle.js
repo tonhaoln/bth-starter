@@ -1,3 +1,3 @@
 import '/node_modules/bootstrap/dist/js/bootstrap.bundle.min';
 
-import './site-components/utils';
+import './layout/site-nav';

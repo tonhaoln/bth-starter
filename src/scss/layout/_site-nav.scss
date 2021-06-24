@@ -2,16 +2,18 @@ nav{
 	
 	display: flex;
 	justify-content: flex-end;
+	
 	//font-family: $font-family-base;		     	
 
+	
 	ul.menu{		    			
     	
     	padding: 0 5%;
 
+    	
     	li{		    		
-    		@include font-size($h1-font-size);    		
-    		//text-align:center;	
-    		//border-bottom:1px solid rgba(white,.2); 
+    		
+    		@include font-size($h1-font-size);    		    		    		
     		
     		a{
     			text-decoration:none;
@@ -20,17 +22,32 @@ nav{
     		
     		&:not(.btn){
     			padding:1.5rem 0;
-    			line-height:1;
-
-    			a{
-	    			color: $primary;		    				    			
-	    		}   	
+    			line-height:1;    			
     		}
     		
-    		&.btn{
-    			margin-top:2rem;
+    		&.btn{    		    			
+    			a{
+    				color:inherit;
+    			}
     		}
 
+    		
+    		&.menu-item-has-children{
+    			ul.sub-menu{							
+    				display: none;
+    				border-radius: 8px;	
+    				height: auto;	
+    				background: $gray-200;
+
+    				li{
+    					a{
+    						color: $secondary;
+    					}
+    				}													
+    			}
+    		}
+    		
+    		
     		
     		// ---> Mobile Nav Submenu <--- //
     		
@@ -38,33 +55,21 @@ nav{
     		
 	    		&.menu-item-has-children{
 	    			    			
-	    			padding-bottom:0;	    			
-
-	    			&.active{
-	    				padding-bottom:0;
-	    			} 			
-
-		    		ul.sub-menu{							
+	    			ul.sub-menu{							
 						
-						margin-top:1.5rem; 
-						max-height: 0;
-						overflow: hidden;
-						@include transition;
-																
-			    		&.show{
-			    			max-height: 1000px;
-			    		}
-						
-						li{										
-							background:darken($secondary, 5%);	
-							border-bottom:none;	   
-							
-							& + li{
-								border-top:1px solid rgba(white,.2);
-							}											
+						margin-top:1.5rem; 						
+												
+						li{
+							padding-left: 2rem;
+							padding-right: 2rem;
+							@include font-size($h3-font-size);
 						}
 					}
 				}
+
+				&.btn{
+	    			margin-top:2rem;	    				    		
+	    		}
 			}
     	}
 
@@ -77,6 +82,7 @@ nav{
     		align-items: center;
     		padding: 0; 
 
+    		
     		li{
     			@include font-size($h5-font-size);
     			display:inline;    			    			
@@ -86,15 +92,14 @@ nav{
     				padding:0;
 
     				a{
-    					padding-top:2.625rem;
-    					padding-bottom:2.625rem;
+    					padding:2.625rem 0; //Over all height 6.5rem (104px)
     					display:inline-block;
     				}
     			}
 				
 				&:hover{
 					a{
-						color: white;
+						//color: white;
     					//text-decoration: underline;
 					}
 				}	
@@ -103,98 +108,39 @@ nav{
     				margin-left:get-clamp(8, 56);
     			}
 
+    			
     			&.menu-item-has-children{
+    				
     				position: relative;
 	    			
 	    			ul.sub-menu{
-	    				background: white;
-	    				border-radius: 8px;	    				
-	    				
+	    					    					    				
 	    				position: absolute;
-	    				box-align: start;
-	    				align-items: flex-start;
-    					left: auto;
-    					top: auto;
-    					right: 0;
-    					bottom: auto;
-			    
-					    display: flex;
-					    overflow: hidden;
-					    width: auto;
-					    margin-top: 0;
-					    padding: 1.67em 2.22em 1.39em;
-					    box-orient: vertical;
-					    box-direction: normal;
-					    flex-direction: column;
-	    				
-	    				display: none;	    				
-	    				
+	    				right: 0;
+	    				hegiht:auto;
+					    
 	    				li{
 	    					display: block;
-	    					margin:0;
-	    					padding:1rem 0;
-	    					//text-align:center;	    					
-
-	    					& + li{
-								//border-top:1px solid rgba(white,.2);
-							}
-
-							a{
-								color: $primary;
-								padding: 0;
-								
-								&:hover{
-									color:$secondary;
-								}
+	    					margin: 1.25em 2.25em;
+	    					
+	    					a{							
+								padding: 0;																							
 							}
 	    				}
-	    			}
-
-	    			&:hover{
-	    				ul.sub-menu{
-							display:block;
-						}
-	    			}
-	    		}
-
-	    		&.btn{
-	    			margin-top:0;
+	    			}	    			
 	    		}
     		}
     	}
 	}
 
 
-	
 
-	// ---> Button Nav <--- //
-	
-	//.navbar-cta{
-		//font-family: $header-font-family;
-		//font-size: 1.15rem;
-		//letter-spacing:.15rem;							
-		//background: $primary;		
-		//text-transform:uppercase;					
-		//text-shadow: 0px 0px 16px rgba($secondary,.5);
-		//border-bottom:none;	    
-
-		//@include media-breakpoint-up(lg) { 
-			//padding: 0 3rem!important;
-			//height: $header-height;								
-			//display: flex!important;
-    		//align-items: center;
-    	//}
-	//}
-
-
-	
-	
 	// ---> Mobile Nav Custom Style <!--- //
 
 	.nav-dropdown{
 		@include media-breakpoint-down(lg) { 
 			margin-top: $header-height;
-			background: $secondary;		
+			background: white;		
 
 			.menu{
 				padding-bottom:$header-height;
@@ -204,7 +150,6 @@ nav{
 
 
 
-	
 	// ---> Mobile Nav Base Style <!--- //
 	
 	.nav-toggler{
