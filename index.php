@@ -19,7 +19,8 @@ get_header();
 
 		<?php if (is_front_page()) { 
 
-			 get_template_part( TEMPLATE_PATH . 'pages/front-page' );
+			 //get_template_part( TEMPLATE_PATH . 'pages/front-page' );
+			 get_template_part( TEMPLATE_PATH . 'components/swiper-block' );
 
 		} else {
 			 

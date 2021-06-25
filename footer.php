@@ -1,6 +1,6 @@
 <footer>
 
-	<div class="site-info">
+	<div class="site-info container-lg">
 		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'bth-starter' ) ); ?>">
 			<?php printf( esc_html__( 'Proudly powered by %s', 'bth-starter' ), 'WordPress' ); ?>
 		</a>
@@ -9,6 +9,8 @@
 	</div><!-- .site-info -->
 			
 </footer>
+
+<!--<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>-->
 
 <?php wp_footer(); ?>
 </body>

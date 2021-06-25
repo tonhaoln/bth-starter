@@ -1,7 +1,13 @@
+// Site Base 
 @import "utils/variables";
 @import "utils/mixins";
-@import "vendor/bootstrap";
 
+// Vendors
+@import "vendor/bootstrap";
+@import "vendor/swiper"; 
+
+// Site Layout
 @import "base/reset";   
 @import "layout/site-header";
 @import "layout/site-nav";
+@import "components/swiper-custom"; 

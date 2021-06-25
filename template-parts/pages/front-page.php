@@ -1,180 +1,128 @@
-    <div class="container my-5">
-    
-    <?php include_svg('chevron-down'); ?>
+<div class="container-lg my-5">
+  <h1 class="display-1">Hero Paragraph</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 
-    <a class="btn btn-primary" href="#" role="button">Link</a>
-    <h1>Bootstrap grid examples</h1>
-    <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
-    <p>In these examples the <code>.themed-grid-col</code> class is added to the columns to add some theming. This is not a class that is available in Bootstrap by default.</p>
+  <hr>
 
-    <h2 class="mt-4">Five grid tiers</h2>
-    <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
-
-    <div class="row mb-3">
-      <div class="col-4 themed-grid-col">.col-4</div>
-      <div class="col-4 themed-grid-col">.col-4</div>
-      <div class="col-4 themed-grid-col">.col-4</div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
-      <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
-      <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
-      <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
-      <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
-      <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
-      <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
-    </div>
-
-    <div class="row mb-3">
-      <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
-      <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
-      <div class="col-xxl-4 themed-grid-col">.col-xxl-4</div>
-    </div>
-
-    <h2 class="mt-4">Three equal columns</h2>
-    <p>Get three equal-width columns <strong>starting at desktops and scaling to large desktops</strong>. On mobile devices, tablets and below, the columns will automatically stack.</p>
-    <div class="row mb-3">
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
-    </div>
-
-    <h2 class="mt-4">Three equal columns alternative</h2>
-    <p>By using the <code>.row-cols-*</code> classes, you can easily create a grid with equal columns.</p>
-    <div class="row row-cols-md-3 mb-3">
-      <div class="col themed-grid-col"><code>.col</code> child of <code>.row-cols-md-3</code></div>
-      <div class="col themed-grid-col"><code>.col</code> child of <code>.row-cols-md-3</code></div>
-      <div class="col themed-grid-col"><code>.col</code> child of <code>.row-cols-md-3</code></div>
-    </div>
-
-    <h2 class="mt-4">Three unequal columns</h2>
-    <p>Get three columns <strong>starting at desktops and scaling to large desktops</strong> of various widths. Remember, grid columns should add up to twelve for a single horizontal block. More than that, and columns start stacking no matter the viewport.</p>
-    <div class="row mb-3">
-      <div class="col-md-3 themed-grid-col">.col-md-3</div>
-      <div class="col-md-6 themed-grid-col">.col-md-6</div>
-      <div class="col-md-3 themed-grid-col">.col-md-3</div>
-    </div>
-
-    <h2 class="mt-4">Two columns</h2>
-    <p>Get two columns <strong>starting at desktops and scaling to large desktops</strong>.</p>
-    <div class="row mb-3">
-      <div class="col-md-8 themed-grid-col">.col-md-8</div>
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
-    </div>
-
-    <h2 class="mt-4">Full width, single column</h2>
-    <p class="text-warning">
-      No grid classes are necessary for full-width elements.
-    </p>
-
-    <hr class="my-4">
-
-    <h2 class="mt-4">Two columns with two nested columns</h2>
-    <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
-    <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
-    <div class="row mb-3">
-      <div class="col-md-8 themed-grid-col">
-        <div class="pb-3">
-          .col-md-8
-        </div>
-        <div class="row">
-          <div class="col-md-6 themed-grid-col">.col-md-6</div>
-          <div class="col-md-6 themed-grid-col">.col-md-6</div>
+  <h1 class="display-4">Cards Three Rows</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>  
+  <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+    <div class="col">
+      <div class="card h-100">
+        <?php include_svg('image'); ?>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         </div>
       </div>
-      <div class="col-md-4 themed-grid-col">.col-md-4</div>
     </div>
+    <div class="col">
+      <div class="card h-100">
+        <?php include_svg('image'); ?>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a short card.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <?php include_svg('image'); ?>
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>    
+  </div>
 
-    <hr class="my-4">
+  <hr>
 
-    <h2 class="mt-4">Mixed: mobile and desktop</h2>
-    <p>The Bootstrap v4 grid system has five tiers of classes: xs (extra small, this class infix is not used), sm (small), md (medium), lg (large), and xl (extra large). You can use nearly any combination of these classes to create more dynamic and flexible layouts.</p>
-    <p>Each tier of classes scales up, meaning if you plan on setting the same widths for md, lg and xl, you only need to specify md.</p>
-    <div class="row mb-3">
-      <div class="col-md-8 themed-grid-col">.col-md-8</div>
-      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+  <h1 class="display-6">Accordion</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <div class="accordion mb-4" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Accordion Item #1
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
     </div>
-    <div class="row mb-3">
-      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
-      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
-      <div class="col-6 col-md-4 themed-grid-col">.col-6 .col-md-4</div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Accordion Item #2
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
     </div>
-    <div class="row mb-3">
-      <div class="col-6 themed-grid-col">.col-6</div>
-      <div class="col-6 themed-grid-col">.col-6</div>
-    </div>
-
-    <hr class="my-4">
-
-    <h2 class="mt-4">Mixed: mobile, tablet, and desktop</h2>
-    <div class="row mb-3">
-      <div class="col-sm-6 col-lg-8 themed-grid-col">.col-sm-6 .col-lg-8</div>
-      <div class="col-6 col-lg-4 themed-grid-col">.col-6 .col-lg-4</div>
-    </div>
-    <div class="row mb-3">
-      <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
-      <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
-      <div class="col-6 col-sm-4 themed-grid-col">.col-6 .col-sm-4</div>
-    </div>
-
-    <hr class="my-4">
-
-    <h2 class="mt-4">Gutters</h2>
-    <p>With <code>.gx-*</code> classes, the horizontal gutters can be adjusted.</p>
-    <div class="row row-cols-1 row-cols-md-3 gx-4">
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gx-4</code> gutters</div>
-    </div>
-    <p class="mt-4">Use the <code>.gy-*</code> classes to control the vertical gutters.</p>
-    <div class="row row-cols-1 row-cols-md-3 gy-4">
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.gy-4</code> gutters</div>
-    </div>
-    <p class="mt-4">With <code>.g-*</code> classes, the gutters in both directions can be adjusted.</p>
-    <div class="row row-cols-1 row-cols-md-3 g-3">
-      <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
-      <div class="col themed-grid-col"><code>.col</code> with <code>.g-3</code> gutters</div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Accordion Item #3
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="container" id="containers">
-    <hr class="my-4">
+  <hr>
 
-    <h2 class="mt-4">Containers</h2>
-    <p>Additional classes added in Bootstrap v4.4 allow containers that are 100% wide until a particular breakpoint. v5 adds a new <code>xxl</code> breakpoint.</p>
+  <h2 class="mb-3">Responsive List Dropdown for Mobile</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    <div class="col">
+      
+        <a class="d-lg-none" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link Group 1
+        </a>
+      
+      <div class="collapse d-lg-block" id="collapseExample">
+        <ul class="list-unstyled mb-0">
+          <li>Lorem ipsum</li>
+          <li>Minim veniam</li>
+          <li>Nulla pariatur</li>
+          <li>Excepteur sint</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col">
+      
+        <a class="d-lg-none" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link Group 2
+        </a>
+      
+      <div class="collapse d-lg-block" id="collapseExample2">
+        <ul class="list-unstyled mb-0">
+          <li>Lorem ipsum</li>
+          <li>Minim veniam</li>
+          <li>Nulla pariatur</li>
+          <li>Excepteur sint</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div class="container themed-container">.container</div>
-  <div class="container-sm themed-container">.container-sm</div>
-  <div class="container-md themed-container">.container-md</div>
-  <div class="container-lg themed-container">.container-lg</div>
-  <div class="container-xl themed-container">.container-xl</div>
-  <div class="container-xxl themed-container">.container-xxl</div>
-  <div class="container-fluid themed-container">.container-fluid</div>
+</div>
