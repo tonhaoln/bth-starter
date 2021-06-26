@@ -1,0 +1,6 @@
+.section{
+  padding-top:10rem;
+  @include media-breakpoint-up(lg){
+    padding-top:16rem;
+  }
+}

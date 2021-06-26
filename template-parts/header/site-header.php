@@ -1,4 +1,4 @@
-<header>
+<header class="site-header">
 	<div class="header-content">
 		<div class="logo-wrapper">			
 			<a href="/" class="site-logo"></a>
