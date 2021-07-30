@@ -2,14 +2,14 @@ var Swiper = require('swiper');
 
 const swiper = new Swiper.default('.swiper-container', {
   // Optional parameters
-  
-  //direction: 'vertical',
-  //loop: true,
+  speed: 800,
+  parallax: true, 
 
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
+
 
   // Navigation arrows
   navigation: {
@@ -22,5 +22,3 @@ const swiper = new Swiper.default('.swiper-container', {
     el: '.swiper-scrollbar',
   },
 });
-
-//alert("Hello! I am an alert box!!"); 

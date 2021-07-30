@@ -1,5 +1,5 @@
-<header class="site-header">
-	<div class="header-content">
+<header class="navbar navbar-fixed navbar-hs">
+	<div class="navbar-content">
 		<div class="logo-wrapper">			
 			<a href="/" class="site-logo"></a>
 		</div>

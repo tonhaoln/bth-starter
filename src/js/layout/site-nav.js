@@ -3,7 +3,7 @@ import $ from 'jquery';
 jQuery(function( $ ) {
 
     /**
-    * Mobile Navigation dropdown
+    * Mobile Nav dropdown
     */
     $('.nav-toggler').click(function() {
         $(this).toggleClass('active');
@@ -13,7 +13,7 @@ jQuery(function( $ ) {
 
     
     /**
-    * Navigation item with sub-menu class toggle 
+    * Nav menu item with sub-menu class toggle 
     * sub-menu show/hide slide animation
     */
     $('.menu-item-has-children').click(function() {
@@ -36,15 +36,16 @@ jQuery(function( $ ) {
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         if (scroll > lastScroll) {
-            $('.site-header').css({
+            $('.navbar-hs').css({
                 'transition': 'transform .3s ease',
+                'transition-delay': '0.18s',
                 'transform': 'translate3d(0px, -100%, 0px) scale3d(1, 1, 1)',
                 'will-change': 'transform'
             });                    
 
         } else if (scroll < lastScroll) {
-            $('.site-header').css({
-                'transition': 'transform 1s ease',
+            $('.navbar-hs').css({
+                'transition': 'transform .8s ease',
                 'transform': 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1)',               
             });
         }

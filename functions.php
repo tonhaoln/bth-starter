@@ -8,6 +8,7 @@
  */
 
  define('TEMPLATE_PATH','template-parts/');
+ define('COMPONENT_PATH', 'components/');
 
 if ( ! function_exists( 'starter_setup' ) ) :
 	
@@ -77,8 +78,27 @@ function starter_assets() {
 }
 add_action( 'wp_enqueue_scripts', 'starter_assets' );
 
+/**
+ * Initialize ACF Componets
+ */
+require get_template_directory() . '/inc/componentes.php';
+
+/**
+ * Completely Disable Comments
+ */
+require get_template_directory() . '/inc/disable-comments.php';
 
 /**
  * Load Extras and Helpers file
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Load Hooks file
+ */
+require get_template_directory() . '/inc/hooks.php';
+
+/**
+ * Video Helper file
+ */
+require get_template_directory() . '/inc/video-functions.php';

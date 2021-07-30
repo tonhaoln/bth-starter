@@ -1,0 +1,75 @@
+// Site Base 
+@import "../../src/scss/utils/variables";
+@import "../../src/scss/utils/mixins";
+
+
+.accordion { 
+    list-style: none;
+    padding: 0;
+        
+    .accordion-item {
+        margin: .5em 0;    
+        position:relative;  
+        border: 1px solid $primary;
+        
+        .question {
+            width: 100%;
+            display: block;
+            //border: 1px solid $primary;
+            //color: white;
+            padding: 1em;
+            border-radius: 0.15em;
+            transition: all .3s ease;
+            line-height:1;
+            
+            &:hover {
+                //background: rgba(0, 0, 0, 0.9);
+            }
+
+            &.active{
+                //border-bottom-left-radius:0;
+                //border-bottom-right-radius:0;
+                //border-bottom:0;
+            }
+        }
+
+        .answer {
+            padding:2rem;
+            overflow: hidden;
+            display: none;
+            //background: rgba(0,0,0,0.78);      
+            border-top: 1px solid lighten($primary, 20%);  
+            //border-top:0;                
+            //margin-top:-2px;
+        }        
+
+        &:hover{
+            .question {
+                color:$primary;
+            }
+        }
+
+        &::after {
+            top: 26px;            
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            right: calc(1rem + 10px);
+            transition: border-top-color 150ms;
+            border-top-color: $primary;
+            border-width: 8px;
+            margin-right: -8px;
+        }
+
+        &.shown{
+            .answer {
+                margin-top:-8px;
+                border: 1px solid $primary;
+                border-top:none;
+            }
+        }
+    }
+}

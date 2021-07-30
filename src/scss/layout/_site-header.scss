@@ -1,21 +1,15 @@
-$header-height: 6.5rem;
-
-header.site-header{
-	display: flex;
-	position: fixed;    
-	width:100%;
-	top:0;
+.navbar{
+	display: flex;	
     align-items: center;    
     z-index:9;        
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);    
-    background:white;        
-    transform-style: preserve-3d;
+    background:white;           
     
     @include media-breakpoint-down(lg) { 
     	min-height:$header-height;
     }
 
-    .header-content{
+    .navbar-content{
     	display: grid;
 		position: relative;
 		box-sizing: content-box;	
@@ -49,5 +43,16 @@ header.site-header{
 				grid-column: 2 / span 3;							
 			}
 		}
-    }    
+    }
+
+    &.navbar-fixed{
+    	position: fixed;    
+		width:100%;
+		top:0;
+
+		&.navbar-hs{
+			transform-style: preserve-3d;
+		}
+    }   
+
 }
